@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-supabase-template",
+  "name": "shadowbound",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -7,17 +7,21 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "deploy": "railway up",
     "db:init": "supabase init",
     "db:start": "supabase start",
-    "db:stop": "supabase stop --project-id nextjs-supabase-template",
+    "db:stop": "supabase stop --project-id Shadowbound",
     "db:link": "supabase link",
     "db:login": "supabase login",
     "db:pull": "supabase db pull",
     "db:push": "supabase db push",
     "db:status": "supabase status",
-    "db:reset-full": "supabase db dump --data-only > supabase/seed.sql && supabase db reset",
-    "db:dump": "supabase db dump --data-only > supabase/seed.sql",
-    "db:reset": "supabase db reset"
+    "db:reset": "supabase db reset",
+    "db:sync": "supabase db dump > supabase/seed.sql && supabase db reset",
+    "db:sync-live": "supabase db dump > supabase/seed.sql --local && supabase db reset --linked"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.43.4",
@@ -26,7 +30,9 @@
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.77.3"
+    "react-draggable": "^4.4.6",
+    "sass": "^1.77.3",
+    "supabase": "^1.172.2"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -34,7 +40,6 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
-    "supabase": "^1.172.2",
     "typescript": "^5"
   }
 }
