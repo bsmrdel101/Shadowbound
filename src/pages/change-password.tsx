@@ -18,7 +18,7 @@ export default function ChangePassword() {
     }
     const { error } = await supabase.auth.updateUser({ password: password });
     if (error) return console.error(error);
-    location.replace('/');
+    location.href = '/';
   };
 
 

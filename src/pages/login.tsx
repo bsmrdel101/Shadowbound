@@ -19,7 +19,7 @@ export default function Login() {
     if (error) {
       return console.error(error);
     }
-    location.replace('/');
+    location.href = '/';
   };
 
 
