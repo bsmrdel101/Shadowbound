@@ -31,16 +31,16 @@ export default function Home() {
 
   return (
     <Layout title="Home">
-      <main>
-        <Button
+      <main className="home">
+        {/* <Button
           variant={['fit-content']}
           onClick={async () => {
             await supabase.auth.signOut();
           }}
         >
           Logout
-        </Button>
-        <h1>Hello World</h1>
+        </Button> */}
+        <h1>Shadowbound</h1>
       </main>
     </Layout>
   );

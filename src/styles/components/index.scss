@@ -5,9 +5,10 @@ main {
   height: 100%;
 }
 
-.dashboard {
-  &__row {
-    display: flex;
-    gap: 2rem;
+.home {
+  h1 {
+    font-size: var(--font-xxxl);
+    text-align: center;
+    text-shadow: 3px 2px 5px var(--purple-light-0);
   }
 }
